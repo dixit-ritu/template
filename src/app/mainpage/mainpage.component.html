@@ -1,0 +1,160 @@
+<nz-layout class="layout">
+    <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
+      <div class="logo">
+          <img src="../../assets/navbar-logo.svg">
+      </div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-menu-item>
+          <i nz-icon nzType="user"></i>
+          <span>DASHBOARD</span>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="video-camera"></i>
+          <span>USER PROFILE</span>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="upload"></i>
+          <span>TABLE LIST</span>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="user"></i>
+          <span>TYPOGRAPHY</span>
+        </li>
+        <li nz-menu-item>
+            <i nz-icon nzType="user"></i>
+            <span>ICONS</span>
+          </li>
+          <li nz-menu-item>
+            <i nz-icon nzType="user"></i>
+            <span>MAPS</span>
+          </li>
+          <li nz-menu-item>
+            <i nz-icon nzType="user"></i>
+            <span>NOTIFICATIONS</span>
+          </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <a href="" class="dash">Dashboard</a>
+          <ul class="header">
+              <li class="no-style"><a href=""><i class="fa fa-dashboard"></i></a></li>
+
+
+              <li ngbDropdown class="no-style">
+                <button class="btn bt" id="dropdownBasic1" ngbDropdownToggle><i class="fa fa-globe"></i></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem>Action - 1</button>
+                  <button ngbDropdownItem>Another Action</button>
+                  <button ngbDropdownItem>Something else is here</button>
+                </div>
+              </li>
+      
+              <li class="no-style"><a href=""><i class="fa fa-search"></i></a></li></ul>
+          <ul class="header ml-auto">
+            <li class="no-style"><a href="" class="last-menu">Account</a></li>
+            <li ngbDropdown class="no-style">
+              <button class="btn last-menu" id="dropdownBasic1" ngbDropdownToggle>Dropdown</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>Action - 1</button>
+                <button ngbDropdownItem>Another Action</button>
+                <button ngbDropdownItem>Something else is here</button>
+              </div>
+            </li>
+            <li class="no-style"><a href="" class="last-menu">Logout</a></li>
+        </ul>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <div class="container-fluid">
+               <div nz-row>
+                 <div nz-col nzSpan="8"> 
+                    <nz-card nzTitle="Email Statistics">
+                        <div style="display: block">
+                            <canvas baseChart
+                              [datasets]="barChartData"
+                              [labels]="barChartLabels"
+                              [options]="barChartOptions"
+                              [plugins]="barChartPlugins"
+                              [legend]="barChartLegend"
+                              [chartType]="barChartType">
+                            </canvas>
+                          </div>
+                      </nz-card>
+                  </div>
+                  <div nz-col nzSpan="16">
+                    <nz-card nzTitle="Users Behaviour">
+                        <div style="display: block">
+                            <canvas baseChart
+                              [datasets]="scatterChartData"
+                              [options]="scatterChartOptions"
+                              [labels]="scatterChartLabels"
+                              [chartType]="scatterChartType">
+                            </canvas>
+                          </div>
+                      </nz-card>
+                  </div>
+              </div>
+
+
+
+              <div nz-row class="new-inner m-top">
+                <div nz-col nzSpan="12">
+                    <nz-card nzTitle="2014 Sales">
+                        <div class="chart">
+                            <canvas baseChart
+                              [data]="pieChartData"
+                              [labels]="pieChartLabels"
+                              [chartType]="pieChartType"
+                              [options]="pieChartOptions"
+                              [plugins]="pieChartPlugins"
+                              [colors]="pieChartColors"
+                              [legend]="pieChartLegend">
+                            </canvas>
+                          </div>
+                      </nz-card>
+                  </div>
+                  <div nz-col nzSpan="12">
+                    <nz-card nzTitle="Tasks">
+                      <div class="header new">
+                        <ul class="header mrgn">
+                          <li class="new-style"><i class="fa fa-check-square-o" aria-hidden="true"></i></li>
+                          <li class="new-style"><p>Sign contract for "What are conference organizers afraid of?"</p></li>
+                        </ul>
+                      
+                        <ul class="header ml-auto mrgn">
+                          <li class="new-style"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></li>
+                          <li class="new-style"><i class="fa fa-times" aria-hidden="true"></i></li>
+                        </ul>
+                      </div>
+
+                      <div class="header new">
+                        <ul class="header mrgn">
+                          <li class="new-style"><i class="fa fa-check-square-o" aria-hidden="true"></i></li>
+                          <li class="new-style"><p>Sign contract for "What are conference organizers afraid of?"</p></li>
+                        </ul>
+                      
+                        <ul class="header ml-auto mrgn">
+                          <li class="new-style"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></li>
+                          <li class="new-style"><i class="fa fa-times" aria-hidden="true"></i></li>
+                        </ul>
+                      </div>
+                      </nz-card>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </nz-content>
+      <nz-footer>
+        <ul class="header">
+          <li class="new-style"><a href="">Home</a></li>
+          <li class="new-style"><a href="">Blog</a></li>
+          <li class="new-style"><a href="">Portfolio</a></li>
+          <li class="new-style"><a href="">Company</a></li>
+        </ul>
+        <ul class="header ml-auto">
+          <li class="new-style">Ant Design ©2020 Implement By Angular</li>
+        </ul>
+      </nz-footer>
+    </nz-layout>
+  </nz-layout>

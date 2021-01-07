@@ -1,0 +1,98 @@
+.layout {
+    min-height: 100vh;
+  }
+
+  .logo {
+    height: 32px;
+    margin: 20px;
+  }
+
+  nz-header {
+    background: #fff;
+    padding: 0;
+    display:flex;
+  }
+
+  nz-content {
+    margin: 24px 16px 0;
+  }
+
+  .inner-content {
+    background:#f0f2f5;
+    display: flex;
+  }
+
+  nz-footer {
+    text-align: center;
+    background-color: white;
+    margin-top:30px;
+    display:flex;
+  }
+  .no-style{
+      list-style-type: none;
+      font-size: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  .new-style{
+    list-style-type: none;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  ::ng-deep .ant-layout-footer{
+    padding:10px 10px;
+    font-weight: bold;
+  }
+ .bt{
+   font-size: 20px;
+   color: #777;
+ }
+::ng-deep .ant-card{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+  
+  .last-menu{
+      font-size: 15px;
+      font-weight: bold;
+      color: #777;
+  }
+  .no-style a{
+      color:#777;
+  }
+  .dash{
+    color: #777;
+    font-size: 20px;
+    padding-left: 12px;
+  }
+  .no-pad{
+    padding-left: 0px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  .header{
+      display:flex;
+  }
+  .ml-auto{
+      margin-left:auto;
+      margin-right:15px;
+  }
+  .new-inner{
+      display:flex;
+  }
+  .new{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  ::ng-deep .ant-card-head-title{
+      font-size: 20px;
+  }
+  .mrgn{
+    margin-bottom: 0px;
+    position: relative;
+    top:8px;
+  }
+.m-top{
+    margin-top:20px;
+}
+
